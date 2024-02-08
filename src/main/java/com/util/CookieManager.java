@@ -7,10 +7,20 @@ import jakarta.servlet.http.HttpServletResponse;
 public class CookieManager {
     // 1. 쿠키 생성
     //파라메터로 이름, 값, 유지기간 받아와서 새로운 쿠키 생성하기
+
+    /**
+     * 쿠키 생성 메서드
+     * @param :  cName (쿠키 이름)
+     * @return : void
+     * @throws 예외처리 하는 방식
+     */
+
     /*
+     * 이름, 값, 유지기간 받아와서 새로운 쿠키 생성
      * @param :  cName (쿠키 이름)
      * @param :  cValue (쿠키 값)
      * @param :  cTime (쿠키 유지기간)
+     *  @return : void
     */
     public static  void makeCookie (HttpServletResponse response, String cName, String cValue, int cTime) {
         // 쿠키 생성

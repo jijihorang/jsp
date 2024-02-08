@@ -10,5 +10,4 @@
     response.addCookie(cookie);
     out.print("쿠키 : 하루동안 열지않음");
 }
-
 %>
