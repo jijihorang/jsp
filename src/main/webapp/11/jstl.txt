@@ -1,0 +1,23 @@
+JSTL
+
+1. CORE(코어) 태그
+    사용 방법 1 : <c:set var ="변수명" value ="값" scope="영역"/>
+    사용 방법 2 : <c:set var ="변수명" scope="영역">
+                    value ="값"
+                </c:set>
+
+    target : 자바빈즈 설정
+    property : 자바빈즈의 속성을 지정
+
+
+<c:if> 형식
+<c:if test="조건식 넣는 자리" var="조건 결과를 저장할 변수명">
+    조건이 true일 경우 실행될 코드
+</c:if>
+
+<c:choose>, <c:when>, <c:otherwise> 형식 : 다중조건을 판단할 때 사용
+    <c:choose>
+        <c:when test="조건 1">조건 1 만족하는 경우</c:when> <%-- if문 --%>
+        <c:when test="조건 2">조건 2 만족하는 경우</c:when> <%-- els if문 --%>
+        <c:otherwise>아무 조건도 만족하지 않는 경우</c:otherwise> <%-- else문 --%>
+    </c:choose>

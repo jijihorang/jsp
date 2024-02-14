@@ -52,4 +52,42 @@
         <filter-name>SetCharEncoding</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+  <!--Hello Servlet 서블릿 등록 -->
+    <!--<servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.servlet.HelloServlet</servlet-class>
+    </servlet>
+
+    &lt;!&ndash; 서블릿과 요청명 매핑 &ndash;&gt;
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/12/HelloServlet.do</url-pattern>
+    </servlet-mapping>-->
+
+    <!-- DirectServletPrint 서블릿 -->
+    <servlet>
+        <servlet-name>DirectServletPrint</servlet-name>
+        <servlet-class>com.servlet.DirectServletPrint</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DirectServletPrint</servlet-name>
+        <url-pattern>/12/DirectServletPrint.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MemberAuth</servlet-name>
+        <servlet-class>com.servlet.MemberAuth</servlet-class>
+        <init-param>
+            <param-name>admin_id</param-name>
+            <param-value>ming</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MemberAuth</servlet-name>
+        <url-pattern>/12/MemberAuth.mvc</url-pattern>
+    </servlet-mapping>
 </web-app>
+

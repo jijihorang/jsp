@@ -7,7 +7,7 @@
     <title>Title</title>
 
     <%
-        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
         long creationTime = session.getCreationTime();  // 세션 생성 시간
         String creationTimeStr = dateFormat.format(new Date(creationTime));
 
