@@ -25,6 +25,7 @@
     List<BoardDTO> boardList = dao.selectList(param);
     dao.close();
 %>
+
 <html>
 <head>
     <meta charset="UTF-8">

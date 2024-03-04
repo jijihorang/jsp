@@ -53,6 +53,21 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!-- 15장 -->
+    <filter>
+        <filter-name>BasicFilter</filter-name>
+        <filter-class>com.filter.BasicFilter</filter-class>
+        <init-param>
+            <param-name>FILTER_INIT_PARAM</param-name>
+            <param-value>필터 초기화 매개변수</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>BasicFilter</filter-name>
+        <url-pattern>/15/BasicFilter.jsp</url-pattern>
+    </filter-mapping>
+
   <!--Hello Servlet 서블릿 등록 -->
     <!--<servlet>
         <servlet-name>HelloServlet</servlet-name>
@@ -66,7 +81,7 @@
     </servlet-mapping>-->
 
     <!-- DirectServletPrint 서블릿 -->
-    <servlet>
+   <!-- <servlet>
         <servlet-name>DirectServletPrint</servlet-name>
         <servlet-class>com.servlet.DirectServletPrint</servlet-class>
     </servlet>
@@ -89,5 +104,36 @@
         <servlet-name>MemberAuth</servlet-name>
         <url-pattern>/12/MemberAuth.mvc</url-pattern>
     </servlet-mapping>
+
+    &lt;!&ndash; default 서블릿 &ndash;&gt;
+    <servlet>
+        <servlet-name>MVCBoardList</servlet-name>
+        <servlet-class>com.model2.ListController</servlet-class> &lt;!&ndash; ListController 자바 클래스 이름 &ndash;&gt;
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MVCBoardList</servlet-name>
+        <url-pattern>/mvcboard/list.do</url-pattern> &lt;!&ndash; Default a 태그 &ndash;&gt;
+    </servlet-mapping>
+
+    &lt;!&ndash; 14장 write 서블릿 &ndash;&gt;
+    <servlet>
+        <servlet-name>MVCBoardWrite</servlet-name>
+        <servlet-class>com.model2.WriteController</servlet-class>
+        <multipart-config> &lt;!&ndash; 용량 설정 &ndash;&gt;
+            <max-file-size>1048576</max-file-size> &lt;!&ndash; 1mb &ndash;&gt;
+            <max-request-size>10485760</max-request-size> &lt;!&ndash; 10mb&ndash;&gt;
+        </multipart-config>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MVCBoardWrite</servlet-name>
+        <url-pattern>/mvcboard/write.do</url-pattern>
+    </servlet-mapping>
+-->
+    <!-- 15장 listener -->
+    <listener>
+        <listener-class>com.listener.ContextListener</listener-class>
+    </listener>
 </web-app>
 
